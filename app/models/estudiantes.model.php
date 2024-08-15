@@ -7,7 +7,8 @@
  */
 
 // TODO: Incluir archivo de configuración
-require_once('../config/config.php');
+//require_once('../config/config.php');
+require_once(__DIR__ . '/../config/config.php');
 
 // TODO: Definir clase Estudiantes
 class Estudiantes

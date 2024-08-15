@@ -6,7 +6,8 @@
  * Fecha: 14/08/2024
  */
 
-require_once('../config/config.php');
+//require_once('../config/config.php');
+require_once(__DIR__ . '/../config/config.php');
 
 class Cursos
 {
@@ -18,13 +19,12 @@ class Cursos
         $this->con = (new ClaseConectar())->conectar();
     }
 
-  
     // TODO: Obtener todos los cursos de la base de datos
     
     public function todos()
     {
         try {
-            $query = "SELECT * FROM cursos";
+            $query = "SELECT * FROM Cursos";
             $stmt = $this->con->prepare($query);
             $stmt->execute();
             return $stmt->get_result();
@@ -35,15 +35,14 @@ class Cursos
         }
     }
 
-   
-     //TODO: Obtener un curso por ID de la base de datos
+    //TODO: Obtener un curso por ID de la base de datos
     
-    public function uno($idCurso)
+    public function uno($curso_id)
     {
         try {
-            $query = "SELECT * FROM cursos WHERE idCurso = ?";
+            $query = "SELECT * FROM Cursos WHERE curso_id = ?";
             $stmt = $this->con->prepare($query);
-            $stmt->bind_param("i", $idCurso);
+            $stmt->bind_param("i", $curso_id);
             $stmt->execute();
             return $stmt->get_result();
         } catch (Exception $th) {
@@ -55,12 +54,12 @@ class Cursos
 
     // TODO: Insertar un nuevo curso en la base de datos
      
-    public function insertar($nombre, $descripcion, $duracion, $precio)
+    public function insertar($nombre, $descripcion, $fecha_inicio, $fecha_fin, $estado)
     {
         try {
-            $query = "INSERT INTO cursos (nombre, descripcion, duracion, precio) VALUES (?, ?, ?, ?)";
+            $query = "INSERT INTO Cursos (nombre, descripcion, fecha_inicio, fecha_fin, estado) VALUES (?, ?, ?, ?, ?)";
             $stmt = $this->con->prepare($query);
-            $stmt->bind_param("sssi", $nombre, $descripcion, $duracion, $precio);
+            $stmt->bind_param("ssssi", $nombre, $descripcion, $fecha_inicio, $fecha_fin, $estado);
             $stmt->execute();
             return $this->con->insert_id;
         } catch (Exception $th) {
@@ -72,14 +71,14 @@ class Cursos
 
     // TODO: Actualizar un curso existente en la base de datos
     
-    public function actualizar($idCurso, $nombre, $descripcion, $duracion, $precio)
+    public function actualizar($curso_id, $nombre, $descripcion, $fecha_inicio, $fecha_fin, $estado)
     {
         try {
-            $query = "UPDATE cursos SET nombre = ?, descripcion = ?, duracion = ?, precio = ? WHERE idCurso = ?";
+            $query = "UPDATE Cursos SET nombre = ?, descripcion = ?, fecha_inicio = ?, fecha_fin = ?, estado = ? WHERE curso_id = ?";
             $stmt = $this->con->prepare($query);
-            $stmt->bind_param("ssssi", $nombre, $descripcion, $duracion, $precio, $idCurso);
+            $stmt->bind_param("sssssi", $nombre, $descripcion, $fecha_inicio, $fecha_fin, $estado, $curso_id);
             $stmt->execute();
-            return $idCurso;
+            return $curso_id;
         } catch (Exception $th) {
             throw new Exception("Error al actualizar curso: " . $th->getMessage());
         } finally {
@@ -89,12 +88,12 @@ class Cursos
 
     // TODO: Eliminar un curso de la base de datos
     
-    public function eliminar($idCurso)
+    public function eliminar($curso_id)
     {
         try {
-            $query = "DELETE FROM cursos WHERE idCurso = ?";
+            $query = "DELETE FROM Cursos WHERE curso_id = ?";
             $stmt = $this->con->prepare($query);
-            $stmt->bind_param("i", $idCurso);
+            $stmt->bind_param("i", $curso_id);
             $stmt->execute();
             return 1;
         } catch (Exception $th) {
