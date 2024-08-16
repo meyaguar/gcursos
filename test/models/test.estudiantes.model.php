@@ -69,7 +69,7 @@ $estudiantes = new Estudiantes();
 echo "\nTesteando el método eliminar():\n";
 try {
     // TODO: Verificar que se elimine un estudiante
-    $estudiantes->eliminar(1);
+    $estudiantes->eliminar(7);
     echo "Estudiante eliminado\n";
 } catch (Exception $e) {
     // TODO: Manejar excepciones
