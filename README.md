@@ -82,4 +82,4 @@ Los archivos de prueba para los modelos y controladores se encuentran en el dire
 
 ## Autor
 
-**Eduardo Yaguar**
+**YAGUAR, Eduardo**
