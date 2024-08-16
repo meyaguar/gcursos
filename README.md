@@ -4,7 +4,7 @@
 **GCursos** es un sistema de gestión de cursos, estudiantes e inscripciones que facilita las operaciones básicas de base de datos (CRUD) utilizando PHP y MySQL. Esta aplicación está diseñada para gestionar de manera eficiente la información relacionada con cursos, estudiantes y sus inscripciones.
 
 ## Estructura del Proyecto
-
+```
 gcursos/  
 ├── app/  
 │   ├── config/  
@@ -29,7 +29,8 @@ gcursos/
     └── controllers/  
         ├── test.cursos.controller.php  
         ├── test.estudiantes.controller.php  
-        └── test.inscripciones.controller.php  
+        └── test.inscripciones.controller.php
+```
 
 ## Configuración
 
