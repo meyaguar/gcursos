@@ -34,10 +34,10 @@ gcursos/
 ## Configuración
 
 1. Edite el archivo `config.env` con sus credenciales de base de datos:
-   `DB_HOST=localhost`
-   `DB_USER=root`
-   `DB_PASS=root`
-   `DB_NAME=gcursos`
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASS=root
+   DB_NAME=gcursos
 
 ## Instalación
 
