@@ -1,7 +1,7 @@
 # GCursos - Sistema de Gestión de Cursos
 
 ## Descripción
-**GCursos** es un sistema de gestión de cursos, estudiantes e inscripciones que facilita las operaciones básicas de base de datos (CRUD) implementado en PHP y MySQL, utilizando el patrón de diseño arquitectónico **Model-View-Controller**. Esta aplicación está diseñada para gestionar de manera eficiente la información relacionada con cursos, estudiantes y sus inscripciones.
+**GCursos** es un sistema de gestión de cursos que facilita las operaciones básicas de base de datos (CRUD) implementado en PHP y MySQL, utilizando el patrón de diseño arquitectónico **Model-View-Controller**. Esta aplicación está diseñada para gestionar de manera eficiente la información relacionada con cursos, estudiantes y sus inscripciones.
 
 ## Estructura del Proyecto
 ```
