@@ -2,8 +2,8 @@
 /**
  * Archivo: Inscripciones.php
  * Descripción: Clase para manejar inscripciones en la base de datos
- * Autor: [Tu nombre]
- * Fecha: [Fecha actual]
+ * Autor: YAGUAR, Eduardo
+ * Fecha: 15/08/2024
  */
 
 // TODO: Incluir archivo de configuración
