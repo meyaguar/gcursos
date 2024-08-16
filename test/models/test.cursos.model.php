@@ -69,7 +69,7 @@ $cursos = new Cursos();
 echo "\nTesteando el método eliminar():\n";
 try {
     // TODO: Verificar que se elimine un curso
-    $cursos->eliminar(1);
+    $cursos->eliminar(7);
     echo "Curso eliminado\n";
 } catch (Exception $e) {
     // TODO: Manejar excepciones
