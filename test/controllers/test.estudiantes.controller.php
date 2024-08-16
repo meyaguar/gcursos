@@ -75,7 +75,7 @@ echo $response . "\n";
 // Va arrojar error por integridad referencial
 echo "Testeando la operación 'eliminar'. Puede arrojar error por integridad referencial:\n";
 $url = 'http://localhost/gcursos/app/controllers/estudiantes.controller.php?op=eliminar';
-$post_data = ['estudiante_id' => 1];
+$post_data = ['estudiante_id' => 8];
 $options = [
     'http' => [
         'method' => 'POST',
