@@ -5,39 +5,39 @@
 
 ## Estructura del Proyecto
 
-gcursos/
-├── app/
-│   ├── config/
-│   │   ├── config.env
-│   │   └── config.php
-│   ├── models/
-│   │   ├── cursos.model.php
-│   │   ├── estudiantes.model.php
-│   │   └── inscripciones.model.php
-│   └── controllers/
-│       ├── cursos.controller.php
-│       ├── estudiantes.controller.php
-│       └── inscripciones.controller.php
-├── database/
+gcursos/  
+├── app/  
+│   ├── config/  
+│   │   ├── config.env  
+│   │   └── config.php  
+│   ├── models/  
+│   │   ├── cursos.model.php  
+│   │   ├── estudiantes.model.php  
+│   │   └── inscripciones.model.php  
+│   └── controllers/  
+│       ├── cursos.controller.php  
+│       ├── estudiantes.controller.php  
+│       └── inscripciones.controller.php  
+├── database/  
 │   ├── schema.sql
-│   └── seeds.sql
-└── test/
-    ├── models/
-    │   ├── test.cursos.model.php
-    │   ├── test.estudiantes.model.php
-    │   └── test.inscripciones.model.php
-    └── controllers/
-        ├── test.cursos.controller.php
-        ├── test.estudiantes.controller.php
-        └── test.inscripciones.controller.php
+│   └── seeds.sql  
+└── test/  
+    ├── models/  
+    │   ├── test.cursos.model.php  
+    │   ├── test.estudiantes.model.php  
+    │   └── test.inscripciones.model.php  
+    └── controllers/  
+        ├── test.cursos.controller.php  
+        ├── test.estudiantes.controller.php  
+        └── test.inscripciones.controller.php  
 
 ## Configuración
 
 1. Edite el archivo `config.env` con sus credenciales de base de datos:
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=root
-DB_NAME=gcursos
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASS=root
+   DB_NAME=gcursos
 
 ## Instalación
 
